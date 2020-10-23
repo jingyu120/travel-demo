@@ -1,0 +1,38 @@
+<p>travel-calculation works!</p>
+
+<div class="container-fluid">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-6">
+        <label>Origination Airport</label>
+        <input type="text" class = "form-control" [(ngModel)]="fromAirport" name = "fromAirport">
+      </div>
+      <div class="form-group col-6">
+        <label>Destination Airport</label>
+        <input type="text" class = "form-control" [(ngModel)]="toAirport" name = "toAirport">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-2">
+        <label>Travel Date</label>
+        <input type="date" class = "form-control">
+      </div>
+      <div class="form-group col-2">
+        <label>Number of Passengers</label>
+        <input type="number" class = "form-control" [(ngModel)]="numPassenger" name = "numPassenger">
+      </div>
+      <div class="form-group align-self-end offset-1">
+        <button (click)="calc()"
+                class="btn btn-light text-info">
+          Submit
+        </button>
+      </div>
+      <div class = "align-self-center offset-1">
+        <button type="button" class="btn btn-secondary">
+          Total cost <span class="badge badge-light">${{result}}</span>
+        </button>
+      </div>
+
+    </div>
+  </form>
+</div>
