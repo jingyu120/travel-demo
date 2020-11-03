@@ -1,7 +1,13 @@
-<h2>Welcome {{title}}</h2>
-
-<p>OS: MacOS</p>
-
-<app-travel-calculation></app-travel-calculation>
+<div class="navbar">
+  <ul>
+    <li class="nav-item">
+      <a class = "nav-link" [routerLink]="['/about']">About</a>
+    </li>
+    <li class="nav-item">
+      <div class="nav-link" [routerLink]="['/travel-calculation']">Calculation</div>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
 
 
